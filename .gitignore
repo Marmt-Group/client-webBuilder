@@ -1,0 +1,11 @@
+bin/
+.env
+php.ini
+/.wp-tests
+/wp/wp-includes
+/wp/wp-content/plugins
+/wp/wp-content/uploads
+/wp/wp-admin
+/wp/wp-config.php
+xdebug*out
+*.DS_Store
