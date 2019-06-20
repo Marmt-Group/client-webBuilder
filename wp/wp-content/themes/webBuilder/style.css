@@ -501,17 +501,35 @@ nav hr {
 .menu {
   padding: 0;
   margin: 0;
-  display: inline-block;
+  display: block;
   position: relative;
   top: 2px;
 }
 .menu li {
-  float: left;
   margin-right: 56px;
   position: relative;
 }
 .menu li:last-child {
   margin-right: 0px;
+}
+.menu li .more-info {
+  border: 1px solid #11528C;
+  padding: 10px 20px !important;
+}
+@media all and (min-width: 768px) {
+  .menu {
+    display: flex;
+  }
+  .menu li:last-child {
+    flex: 1;
+  }
+  .menu li .more-info {
+    float: right;
+    margin-top: -10px;
+  }
+  .menu li .more-info:hover {
+    background: #11528C;
+  }
 }
 .menu li a {
   font-family: "Raleway", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -520,6 +538,7 @@ nav hr {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #777777;
+  cursor: pointer;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   transition: all .5s ease;
@@ -772,12 +791,7 @@ nav hr {
 }
 header {
   position: relative;
-  overflow: hidden;
-}
-@media all and (min-width: 768px) {
-  header {
-    overflow: visible;
-  }
+  overflow: visible;
 }
 header .container {
   position: relative;
@@ -1657,9 +1671,21 @@ img.phone-portrait {
   /* padding-bottom: 40px; */
 }
 .pricing-table .price {
-  padding: 40px 0px;
+  padding: 40px 0px 20px;
   font-weight: 600;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+.pricing-table .price-container {
+  display: flex;
+  justify-content: center;
+}
+.pricing-table .price .price-grid {
+  display: grid;
+  justify-items: center;
+  align-items: end;
+  grid-gap: 1rem;
+  grid-template-columns: 85px 150px 40px;
+  grid-gap: 1rem;
 }
 .pricing-table .price .sub {
   font-size: 16px;
@@ -1690,6 +1716,13 @@ img.phone-portrait {
 }
 .pricing-table.emphasis {
   background-color: #e74c3c;
+}
+.emphasis-popular {
+  position: absolute;
+  margin: 0 auto;
+  color: white;
+  left: 50%;
+  transform: translate(-50%, -10px);
 }
 .pricing-2 .pricing-tables .col-md-3:first-child .pricing-table {
   border-radius: 25px 0px 0px 25px;
@@ -2879,7 +2912,7 @@ footer.short-2 .contact-action:hover {
     color: #333333;
   }
   .overlay-bar {
-    background: rgba(255, 255, 255, 0.9);
+    background: #ffffff;
   }
   .overlay-bar .logo-light {
     display: none;
@@ -4394,6 +4427,11 @@ Styling all field elements
 .nf-form-content input:not([type=button]), .nf-form-content textarea {
   border: none !important;
   border-radius: 6px !important;
+}
+
+.nf-form-content input[type=button] {
+  background: #11528C !important;
+  border-radius: 4px;
 }
 
 .nf-form-fields-required {

@@ -27,6 +27,18 @@ $(document).ready(function(){
 			$('.offscreen-menu .container').toggleClass('reveal-nav');
 		}
 	});
+
+	// Nav click and scroll
+	$('.menu a').on('click', function (event) {
+		event.preventDefault()
+		var target = $(this).data('href')
+		var top = $(target).offset().top
+		
+		window.scrollTo({
+			behavior: 'smooth',
+			top,
+		})
+	})
 	
 	// Detect logo dimensions and add correct class
 	

@@ -1,3 +1,4 @@
-name: webbuilder
+name: webbuilder-new
+recipe: wordpress
 config:
-  php: '7.2'
+  webroot: wp

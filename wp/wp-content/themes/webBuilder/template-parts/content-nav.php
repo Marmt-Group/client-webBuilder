@@ -23,7 +23,12 @@
             
                 <div class="col-md-9 col-sm-8 columns">
                     <ul class="menu">
-                        <li><a href="#about">Our Mission</a></li><li><a href="#team">Leadership&nbsp;</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#contact">Contact Us<br></a></li></ul>
+                        <li><a data-href="#about">Our Mission</a></li>
+                        <li><a data-href="#team">Leadership&nbsp;</a></li>
+                        <li><a data-href="#pricing">Pricing</a></li>
+                        <li><a data-href="#contact">Contact Us<br></a></li>
+                        <li><a data-href="#contact" class="btn more-info">Request Info</a></li>
+                    </ul>
 
                 </div>
             </div>

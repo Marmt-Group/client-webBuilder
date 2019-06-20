@@ -765,11 +765,6 @@ header {
   position: relative;
   overflow: hidden;
 }
-@media all and (min-width: 768px) {
-  header {
-    overflow: visible;
-  }
-}
 header .container {
   position: relative;
   z-index: 3;
@@ -1736,10 +1731,6 @@ img.phone-portrait {
 }
 .pricing-2 .pricing-table .features li:nth-child(even) {
   background: #f4f4f4;
-}
-.pricing-info p {
-  color: #ffffff;
-  font-size: 18px;
 }
 .team-1 h1 {
   margin-bottom: 40px;

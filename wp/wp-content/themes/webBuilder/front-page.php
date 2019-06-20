@@ -107,24 +107,40 @@ get_header();
 										<span class="sub"><?php the_field('pricing_now_title'); ?><sup>*</sup></span>
 									<?php endif; ?>
 								</div>
-								<?php 
-									if( have_rows('now_features') ): ?>
-										<ul class="features">
-										<?php while ( have_rows('now_features') ) : the_row(); ?>
-										
-											<li><?php the_sub_field('feature'); ?></li>
-										
-										<?php
-										endwhile; ?>
-										</ul>
 									<?php 
-									endif;
-								?>
-								<div class="price">
-									<span class="sub">$</span>
-									<span class="amount">98</span>
-									<span class="sub">/mo</span>
-								</div>
+										if( have_rows('now_features') ): ?>
+											<ul class="features">
+											<?php while ( have_rows('now_features') ) : the_row(); ?>
+											
+												<li><?php the_sub_field('feature'); ?></li>
+											
+											<?php
+											endwhile; ?>
+											</ul>
+										<?php 
+										endif;
+									?>
+									<div class="price price-container">
+										<div class="price-grid">
+											<div class="item"><span class="sub">6 Months</span></div>
+											<div class="item"><span class="sub">$</span><span class="amount">148</span></div>
+											<div class="item"><span class="sub">/mo</span></div>
+										</div>
+									</div>
+									<div class="price price-container">
+										<div class="price-grid">
+											<div class="item"><span class="sub">9 Months</span></div>
+											<div class="item"><span class="sub">$</span><span class="amount">98</span></div>
+											<div class="item"><span class="sub">/mo</span></div>
+										</div>
+									</div>
+									<div class="price price-container">
+										<div class="price-grid">
+											<div class="item"><span class="sub">12 Months</span></div>
+											<div class="item"><span class="sub">$</span><span class="amount">48</span></div>
+											<div class="item"><span class="sub">/mo</span></div>
+										</div>
+									</div>
 							</div>
 						</div>
 						
@@ -148,10 +164,26 @@ get_header();
 									<?php 
 									endif;
 								?>
-								<div class="price">
-									<span class="sub">$</span>
-									<span class="amount">98</span>
-									<span class="sub">/mo</span>
+								<div class="price price-container">
+									<div class="price-grid">
+										<div class="item"><span class="sub">6 Months</span></div>
+										<div class="item"><span class="sub">$</span><span class="amount">198</span></div>
+										<div class="item"><span class="sub">/mo</span></div>
+									</div>
+								</div>
+								<div class="price price-container">
+									<div class="price-grid">
+										<div class="item"><span class="sub">9 Months</span></div>
+										<div class="item"><span class="sub">$</span><span class="amount">148</span></div>
+										<div class="item"><span class="sub">/mo</span></div>
+									</div>
+								</div>
+								<div class="price price-container">
+									<div class="price-grid">
+										<div class="item"><span class="sub">12 Months</span></div>
+										<div class="item"><span class="sub">$</span><span class="amount">98</span></div>
+										<div class="item"><span class="sub">/mo</span></div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -162,6 +194,7 @@ get_header();
 								<div class="price">
 									<?php if ( get_field('pricing_agent_title')) : ?>
 										<span class="sub"><?php the_field('pricing_agent_title'); ?><sup>*</sup></span>
+										<p class="emphasis-popular"><small>(most popular)</small></p>
 									<?php endif; ?>
 								</div>
 								<?php 
@@ -177,10 +210,26 @@ get_header();
 									<?php 
 									endif;
 								?>
-								<div class="price">
-									<span class="sub">$</span>
-									<span class="amount">98</span>
-									<span class="sub">/mo</span>
+								<div class="price price-container">
+									<div class="price-grid">
+										<div class="item"><span class="sub">6 Months</span></div>
+										<div class="item"><span class="sub">$</span><span class="amount">248</span></div>
+										<div class="item"><span class="sub">/mo</span></div>
+									</div>
+								</div>
+								<div class="price price-container">
+									<div class="price-grid">
+										<div class="item"><span class="sub">9 Months</span></div>
+										<div class="item"><span class="sub">$</span><span class="amount">198</span></div>
+										<div class="item"><span class="sub">/mo</span></div>
+									</div>
+								</div>
+								<div class="price price-container">
+									<div class="price-grid">
+										<div class="item"><span class="sub">12 Months</span></div>
+										<div class="item"><span class="sub">$</span><span class="amount">148</span></div>
+										<div class="item"><span class="sub">/mo</span></div>
+									</div>
 								</div>
 							</div>
 						</div>	

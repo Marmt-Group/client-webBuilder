@@ -21,9 +21,6 @@
             <div class="row">
                 <div class="col-sm-10">
                     <span class="sub"> &copy; <?php echo date("Y"); ?> WebBuilder</span>
-                    <ul>
-                        <li><a href="#">Terms Of Use</a></li>
-                    </ul>
                 </div>
 
                 <div class="col-sm-2 text-right">
