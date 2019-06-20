@@ -1656,6 +1656,13 @@ img.phone-portrait {
 .strip .signup-email-field:focus {
   outline: none;
 }
+@media screen and (max-width: 1024px) {
+  .section-image img {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}
 .pricing-tables .col-md-3:first-child .pricing-table {
   border-radius: 25px 0px 0px 25px;
 }
@@ -1670,10 +1677,21 @@ img.phone-portrait {
   text-align: center;
   /* padding-bottom: 40px; */
 }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .pricing-table {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
 .pricing-table .price {
   padding: 40px 0px 20px;
   font-weight: 600;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .pricing-table .price:last-child {
+    border-bottom: none;
+  }
 }
 .pricing-table .price-container {
   display: flex;
@@ -1801,6 +1819,16 @@ img.phone-portrait {
 .team-1-member {
   text-align: center;
   margin-top: 48px;
+}
+.team-avatar-container {
+    max-width: 172px;
+    max-height: 172px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+    filter: grayscale(1);
 }
 .team-1-member img {
   display: inline-block;
@@ -4440,4 +4468,8 @@ Styling all field elements
 
 .nf-form-content .list-select-wrap .nf-field-element>div, .nf-form-content input:not([type=button]), .nf-form-content textarea {
   background: #f4f4f4 !important;
+}
+
+.nf-form-content .list-select-wrap .nf-field-element>div, .nf-form-content input:not([type=button]), .nf-form-content textarea {
+  border: 0 !important;
 }

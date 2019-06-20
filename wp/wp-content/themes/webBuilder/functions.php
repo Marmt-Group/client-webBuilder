@@ -36,7 +36,7 @@ function webbuilder_styles() {
     
     if ($_ENV["PHP_ENV"] === 'dev') {$version = time();}
     
-    wp_enqueue_style( 'webbuilder-font-opensans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700%7CRaleway:700' , array(), $version );
+    wp_enqueue_style( 'webbuilder-font-opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700%7CRaleway:700' , array(), $version );
     wp_enqueue_style( 'webbuilder-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' , array(), $version );
     wp_enqueue_style( 'webbuilder-elegant-icons', get_template_directory_uri() . '/css/elegant-icons.min.css' , array(), $version );
     wp_enqueue_style( 'webbuilder-style', get_template_directory_uri() . '/style.css' , array(), $version );

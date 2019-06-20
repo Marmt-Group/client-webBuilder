@@ -50,9 +50,13 @@ get_header();
 								<p class="lead"><?php the_field('1st_section_subtext'); ?></p>
 							<?php endif; ?>
 						</div>
-					
-						<div class="col-sm-7" data-scroll-reveal="enter from bottom and move 100px" style="overflow: hidden;">
-							<img alt="App Screenshot" src="<?php echo get_template_directory_uri() ?>/img/phone.svg" style="width: 120%; max-width: none;margin-top: -130px;margin-left: -70px;">
+
+						<div class="col-sm-7 section-image" data-scroll-reveal="enter from bottom and move 100px" style="overflow: hidden;">
+							<?php if (get_field('1st_section_image')) : ?>
+								<img alt="App Screenshot" src="<?php the_field('1st_section_image'); ?>">
+							<?php else: ?>
+								<img alt="App Screenshot" src="<?php echo get_template_directory_uri() ?>/img/phone.svg" style="width: 120%; max-width: none;margin-top: -130px;margin-left: -70px;">
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>
@@ -74,7 +78,13 @@ get_header();
 										while ( have_rows('leadership') ) : the_row(); ?>
 										<div class="col-sm-6">
 											<div class="team-1-member">
-												<img alt="Team Member" src="<?php echo get_template_directory_uri() ?>/img/team-small-3.png ">
+												<?php if (get_sub_field('avatar')): ?>
+													<img alt="Team Member" src="<?php the_sub_field('avatar'); ?>">
+												<?php else: ?>
+												<div class="team-avatar-container">
+													<img alt="Team Member" src="<?php echo get_template_directory_uri() ?>/img/team-small-3.png ">
+												</div>
+												<?php endif; ?>
 												<h2><?php the_sub_field('name'); ?></h2>
 												<h5><?php the_sub_field('title'); ?></h5>
 												<p class="space-top-small">
@@ -120,27 +130,21 @@ get_header();
 										<?php 
 										endif;
 									?>
-									<div class="price price-container">
-										<div class="price-grid">
-											<div class="item"><span class="sub">6 Months</span></div>
-											<div class="item"><span class="sub">$</span><span class="amount">148</span></div>
-											<div class="item"><span class="sub">/mo</span></div>
-										</div>
-									</div>
-									<div class="price price-container">
-										<div class="price-grid">
-											<div class="item"><span class="sub">9 Months</span></div>
-											<div class="item"><span class="sub">$</span><span class="amount">98</span></div>
-											<div class="item"><span class="sub">/mo</span></div>
-										</div>
-									</div>
-									<div class="price price-container">
-										<div class="price-grid">
-											<div class="item"><span class="sub">12 Months</span></div>
-											<div class="item"><span class="sub">$</span><span class="amount">48</span></div>
-											<div class="item"><span class="sub">/mo</span></div>
-										</div>
-									</div>
+									<?php 
+										if( have_rows('now_prices') ):
+
+											while ( have_rows('now_prices') ) : the_row(); ?>
+											<div class="price price-container">
+												<div class="price-grid">
+													<div class="item"><span class="sub"><?php the_sub_field('term'); ?></span></div>
+													<div class="item"><span class="sub">$</span><span class="amount"><?php the_sub_field('price'); ?></span></div>
+													<div class="item"><span class="sub"><?php the_sub_field('length'); ?></span></div>
+												</div>
+											</div>
+											<?php
+											endwhile;
+										endif;
+									?>
 							</div>
 						</div>
 						
@@ -164,27 +168,21 @@ get_header();
 									<?php 
 									endif;
 								?>
-								<div class="price price-container">
-									<div class="price-grid">
-										<div class="item"><span class="sub">6 Months</span></div>
-										<div class="item"><span class="sub">$</span><span class="amount">198</span></div>
-										<div class="item"><span class="sub">/mo</span></div>
-									</div>
-								</div>
-								<div class="price price-container">
-									<div class="price-grid">
-										<div class="item"><span class="sub">9 Months</span></div>
-										<div class="item"><span class="sub">$</span><span class="amount">148</span></div>
-										<div class="item"><span class="sub">/mo</span></div>
-									</div>
-								</div>
-								<div class="price price-container">
-									<div class="price-grid">
-										<div class="item"><span class="sub">12 Months</span></div>
-										<div class="item"><span class="sub">$</span><span class="amount">98</span></div>
-										<div class="item"><span class="sub">/mo</span></div>
-									</div>
-								</div>
+								<?php 
+									if( have_rows('plus_prices') ):
+
+										while ( have_rows('plus_prices') ) : the_row(); ?>
+										<div class="price price-container">
+											<div class="price-grid">
+												<div class="item"><span class="sub"><?php the_sub_field('term'); ?></span></div>
+												<div class="item"><span class="sub">$</span><span class="amount"><?php the_sub_field('price'); ?></span></div>
+												<div class="item"><span class="sub"><?php the_sub_field('length'); ?></span></div>
+											</div>
+										</div>
+										<?php
+										endwhile;
+									endif;
+								?>
 							</div>
 						</div>
 
@@ -210,27 +208,21 @@ get_header();
 									<?php 
 									endif;
 								?>
-								<div class="price price-container">
-									<div class="price-grid">
-										<div class="item"><span class="sub">6 Months</span></div>
-										<div class="item"><span class="sub">$</span><span class="amount">248</span></div>
-										<div class="item"><span class="sub">/mo</span></div>
-									</div>
-								</div>
-								<div class="price price-container">
-									<div class="price-grid">
-										<div class="item"><span class="sub">9 Months</span></div>
-										<div class="item"><span class="sub">$</span><span class="amount">198</span></div>
-										<div class="item"><span class="sub">/mo</span></div>
-									</div>
-								</div>
-								<div class="price price-container">
-									<div class="price-grid">
-										<div class="item"><span class="sub">12 Months</span></div>
-										<div class="item"><span class="sub">$</span><span class="amount">148</span></div>
-										<div class="item"><span class="sub">/mo</span></div>
-									</div>
-								</div>
+								<?php 
+									if( have_rows('agent_prices') ):
+
+										while ( have_rows('agent_prices') ) : the_row(); ?>
+										<div class="price price-container">
+											<div class="price-grid">
+												<div class="item"><span class="sub"><?php the_sub_field('term'); ?></span></div>
+												<div class="item"><span class="sub">$</span><span class="amount"><?php the_sub_field('price'); ?></span></div>
+												<div class="item"><span class="sub"><?php the_sub_field('length'); ?></span></div>
+											</div>
+										</div>
+										<?php
+										endwhile;
+									endif;
+								?>
 							</div>
 						</div>	
 						
